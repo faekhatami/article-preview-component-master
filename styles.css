@@ -108,9 +108,10 @@ footer button img {
     display: none;
     position: absolute;
     background-color: hsl(217, 19%, 35%);
-    border-radius: 10px;
+
     padding: 15px 20px;
     bottom: -10px;
+    height: 50px;
     /* Adjusted to fit within the container */
     right: 0;
     flex-direction: row;
@@ -119,6 +120,7 @@ footer button img {
     width: calc(100% - 40px);
     /* Adjusted to fit within the container */
     color: white;
+    letter-spacing: 5px;
 }
 
 .share-links::before {
@@ -131,6 +133,10 @@ footer button img {
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
     border-top: 10px solid hsl(217, 19%, 35%);
+}
+
+#share-button-2 {
+    margin-bottom: 5px;
 }
 
 .share-link {
@@ -151,4 +157,54 @@ h3:hover,
 .share-link:hover {
     color: black;
     cursor: pointer;
+}
+
+@media (min-width:376px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        width: 570px;
+    }
+
+    header {
+        width: 210px;
+        height: auto;
+        overflow: hidden;
+        position: relative;
+    }
+
+    /* Style the image to fill the container vertically */
+    header img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        height: 100%;
+        width: auto;
+        transform: translate(-50%, -50%);
+        object-fit: cover;
+    }
+
+    article h2 {
+        line-height: 1.3;
+    }
+
+    article p {
+        font-size: 11px;
+    }
+
+    article {
+        padding-bottom: 0;
+    }
+
+    footer {
+        margin-top: 0;
+    }
+
+    footer h3 {
+        font-size: 11px;
+    }
+
+    footer p {
+        font-size: 11px;
+    }
 }
